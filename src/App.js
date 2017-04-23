@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import todoList from './components/todoList';
+import TodoList from './components/todoList.jsx';
 import { addTodo, toggleTodo, deleteTodo} from './actions.js'
 
 export const App = connect(
@@ -13,6 +13,4 @@ export const App = connect(
         toggleTodo: id=>dispatch(toggleTodo(id)),
         deleteTodo: id=>dispatch(deleteTodo(id))
         }
-    }
-    
-    )(todoList);
+    })(TodoList);

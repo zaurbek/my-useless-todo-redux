@@ -1,9 +1,7 @@
 export default function(state=[],action) {
     switch(action.type){
         case 'ADD_TODO':
-            let reffer=state;
-            reffer.push(action.payload);
-            return reffer;
+            return [...state,action.payload]
         case 'DELETE_TODO':
             return state.filter(item => {
                 if (item.id!==action.payload) {
